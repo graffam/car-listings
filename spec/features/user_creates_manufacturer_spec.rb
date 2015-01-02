@@ -22,4 +22,13 @@ feature "User adds a manufactuerer" do
 
     expect(page).to have_content("Ford")
   end
+
+  scenario "User leaves req'd fields blank" do
+    visit new_manufacturer_path
+
+    click_on "Submit"
+
+    expect(page).to have_content("Name can't be blank")
+    expect(page).to have_content("Country can't be blank")
+  end
 end
