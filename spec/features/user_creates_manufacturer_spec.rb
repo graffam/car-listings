@@ -6,10 +6,11 @@ require "rails_helper"
 #
 # Acceptance Criteria:
 #
-# [] I must specify a manufacturer name and country.
-# [] If I do not specify the required information, I am presented with errors.
-# [] If I specify the required information,
-#    the manufacturer is recorded and I am redirected to the index of manufacturers
+# [X] I must specify a manufacturer name and country.
+# [X] If I do not specify the required information, I am presented with errors.
+# [X] If I specify the required information,
+#     the manufacturer is recorded and
+#     I am redirected to the index of manufacturers
 
 feature "User adds a manufactuerer" do
   scenario "User successfully adds a manufacturer" do

@@ -14,10 +14,7 @@ class ManufacturersController < ApplicationController
 
   def show
     @manufacturer = Manufacturer.find(params["id"])
-
   end
-
-
 
   def manufacturer_params
     params.require(:manufacturer).permit(:name, :country)
