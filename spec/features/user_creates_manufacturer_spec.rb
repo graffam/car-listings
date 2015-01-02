@@ -13,16 +13,13 @@ require "rails_helper"
 
 feature "User adds a manufactuerer" do
   scenario "User successfully adds a manufacturer" do
-    visit manufacturer_new_path
+    visit new_manufacturer_path
 
-    fill_in "name", with: "Ford"
-    fill_in "country", with: "USA"
+    fill_in "Name", with: "Ford"
+    fill_in "Country", with: "USA"
 
     click_on "Submit"
 
     expect(page).to have_content("Ford")
   end
-
-
-
 end
