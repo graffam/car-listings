@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.org/graffam/car-listings.svg?branch=master)](https://travis-ci.org/graffam/car-listings) [![Code Climate](https://codeclimate.com/github/graffam/car-listings.png)](https://codeclimate.com/github/graffam/car-listings) [![Coverage Status](https://coveralls.io/repos/graffam/car-listings/badge.png)](https://coveralls.io/r/graffam/car-listings)
