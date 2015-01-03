@@ -6,7 +6,7 @@ class ManufacturersController < ApplicationController
   def create
     @manufacturer = Manufacturer.create(manufacturer_params)
     if @manufacturer.save
-      redirect_to manufacturer_path(@manufacturer)
+      redirect_to manufacturers_path(@manufacturer)
     else
       render "new"
     end
@@ -14,6 +14,10 @@ class ManufacturersController < ApplicationController
 
   def show
     @manufacturer = Manufacturer.find(params["id"])
+  end
+
+  def index
+    @manufacturers = Manufacturer.all
   end
 
   def manufacturer_params
