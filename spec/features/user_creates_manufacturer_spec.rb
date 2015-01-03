@@ -11,13 +11,13 @@ require "rails_helper"
 # [X] If I specify the required information,
 #     the manufacturer is recorded and
 #     I am redirected to the index of manufacturers
-# [] Manufacturer name must be unique
+# [X] Manufacturer name must be unique
 
 feature "User adds a manufactuerer" do
   scenario "User successfully adds a manufacturer" do
     visit new_manufacturer_path
 
-    fill_in "Name", with: "Ford"
+    fill_in "Name", with: "Chevy"
     fill_in "Country", with: "USA"
 
     click_on "Submit"
@@ -38,14 +38,12 @@ feature "User adds a manufactuerer" do
 
     visit new_manufacturer_path
 
-    FactoryGirl.create(:manufacturer)
+    FactoryGirl.build(:manufacturer)
 
     fill_in "Name", with: "Ford"
     fill_in "Country", with: "USA"
 
     click_on "Submit"
-
-    save_and_open_page
 
     expect(page).to have_content("Name has already been taken")
   end
