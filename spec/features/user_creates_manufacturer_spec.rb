@@ -22,7 +22,7 @@ feature "User adds a manufactuerer" do
 
     click_on "Submit"
 
-    expect(page).to have_content("Ford")
+    expect(page).to have_content("Chevy")
   end
 
   scenario "User leaves req'd fields blank" do
@@ -36,9 +36,9 @@ feature "User adds a manufactuerer" do
 
   scenario "User tries to add an already existing manufacturer" do
 
-    visit new_manufacturer_path
+    FactoryGirl.create(:manufacturer)
 
-    FactoryGirl.build(:manufacturer)
+    visit new_manufacturer_path
 
     fill_in "Name", with: "Ford"
     fill_in "Country", with: "USA"

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :manufacturers
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-
+  resources :cars
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
