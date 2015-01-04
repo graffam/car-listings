@@ -7,7 +7,7 @@ require "rails_helper"
 # [X] I can optionally specify a description of the car.
 # [X] If I enter all of the required information in the required formats,
 #    the car is recorded and I am presented with a notification of success.
-# [] If I do not specify all of the required information in the required formats,
+# [X] If I do not specify all of the required information in the required formats,
 #    the car is not recorded and I am presented with errors.
 # [X] Upon successfully creating a car, I am redirected back to the index of cars.
 
@@ -55,6 +55,6 @@ context "there is a manufacturer in the database" do
     fill_in "Mileage", with: "20,000"
 
     click_on "Submit"
-  end 
+  end
 
 end
