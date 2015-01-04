@@ -36,11 +36,11 @@ feature "User adds a manufactuerer" do
 
   scenario "User tries to add an already existing manufacturer" do
 
-    FactoryGirl.create(:manufacturer)
+    @manufacturer = FactoryGirl.create(:manufacturer)
 
     visit new_manufacturer_path
 
-    fill_in "Name", with: "Ford"
+    fill_in "Name", with: @manufacturer.name
     fill_in "Country", with: "USA"
 
     click_on "Submit"

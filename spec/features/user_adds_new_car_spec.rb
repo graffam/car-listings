@@ -13,14 +13,19 @@ require "rails_helper"
 
 context "there is a manufacturer in the database" do
 
+  before do
+    @manufacturer = FactoryGirl.create(:manufacturer)
+  end
+
   scenario "User sucessfully adds a car" do
+
     visit new_car_path
 
+    select @manufacturer.name, from: "car_manufacturer_id"
     fill_in "Name", with: "Corolla"
     fill_in "Year", with: "1920"
     fill_in "Color", with: "Blue"
     fill_in "Mileage", with: "20,000"
-    select "Chevy", from: "manufacturer_name"
 
     click_on "Submit"
 

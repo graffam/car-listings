@@ -1,0 +1,7 @@
+
+
+
+<%= form_for @car do |f| %>
+    <%= f.label :manufacturer %>
+    <%= f.collection_select(:manufacturer_id, Manufacturer.all, :id, :name) %>
+<% end %>
