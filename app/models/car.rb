@@ -9,5 +9,4 @@ class Car < ActiveRecord::Base
             numericality: { greater_than: 1919 }
 
   belongs_to :manufacturer
-
 end

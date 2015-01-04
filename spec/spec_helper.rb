@@ -17,7 +17,7 @@
 require 'coveralls'
 Coveralls.wear!('rails')
 
-require File.join(File.dirname(__FILE__), 'support/factory_girl.rb')
+require File.join(File.dirname(__FILE__), "support/factory_girl.rb")
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
