@@ -3,6 +3,7 @@ class Car < ActiveRecord::Base
             :color,
             :year,
             :mileage,
+            :name,
             presence: true
   validates :year,
             numericality: { greater_than: 1919 }

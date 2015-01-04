@@ -2,7 +2,7 @@ require "rails_helper"
 
 # Acceptance Criteria:
 #
-# [] I must specify the manufacturer, color, year, and mileage of the car
+# [X] I must specify the manufacturer, color, year, and mileage of the car
 # [] Only years from 1920 and above can be specified.
 # [X] I can optionally specify a description of the car.
 # [X] If I enter all of the required information in the required formats,
@@ -43,5 +43,18 @@ context "there is a manufacturer in the database" do
     expect(page).to have_content("Color can't be blank")
     expect(page).to have_content("Mileage can't be blank")
   end
+
+  scenario "User enter year with value below 1920" do
+
+    visit new_car_path
+
+    select @manufacturer.name, from: "car_manufacturer_id"
+    fill_in "Name", with: "Corolla"
+    fill_in "Year", with: "1919"
+    fill_in "Color", with: "Blue"
+    fill_in "Mileage", with: "20,000"
+
+    click_on "Submit"
+  end 
 
 end
