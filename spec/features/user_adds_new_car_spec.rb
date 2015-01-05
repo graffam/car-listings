@@ -57,6 +57,8 @@ context "there is a manufacturer in the database" do
     fill_in "Mileage", with: "20,000"
 
     click_on "Submit"
+
+    expect(page).to have_content("Year must be greater than 1919")
   end
 
 end
