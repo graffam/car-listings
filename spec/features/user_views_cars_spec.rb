@@ -5,7 +5,7 @@ require "rails_helper"
 
 # Acceptance Criteria:
 # [X] I must see a list of all the cars when I visit cars index
-# [] When I visit the details of a cars, I see the details
+# [X] When I visit the details of a cars, I see the details
 
 feature "user is able to view all of the cars" do
 
@@ -24,7 +24,7 @@ feature "user is able to view all of the cars" do
       visit cars_path
 
       click_on @car.name
-      
+
       expect(page).to have_content("This is a lovely car")
     end
   end
